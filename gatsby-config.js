@@ -5,7 +5,7 @@ const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `NLP Blog - Indrajit Singh`,
+    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
   flags: {
     FAST_DEV: true,
