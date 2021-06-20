@@ -32,7 +32,7 @@ module.exports = {
           },
           {
             name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            url: `https://www.nlpdatascience.ml`,
           },
         ],
       },
