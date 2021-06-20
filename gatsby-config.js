@@ -5,7 +5,7 @@ const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `NLP Blog - Indrajit Singh`,
+    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
   flags: {
     FAST_DEV: true,
@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme’s README for all available options
+      // See the theme's README for all available options
       options: {
         navigation: [
           {
@@ -106,7 +106,7 @@ module.exports = {
             serialize: ({ query: { site, allPost } }) =>
               allPost.nodes.map((post) => {
                 const url = site.siteMetadata.siteUrl + post.slug
-                const content = `<p>${post.excerpt}</p><div style=“margin-top: 50px; font-style: italic;”><strong><a href=“${url}”>Keep reading</a>.</strong></div><br /> <br />`
+                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
 
                 return {
                   title: post.title,
@@ -114,7 +114,7 @@ module.exports = {
                   excerpt: post.excerpt,
                   url,
                   guid: url,
-                  custom_elements: [{ “content:encoded”: content }],
+                  custom_elements: [{ "content:encoded": content }],
                 }
               }),
             query: `
@@ -122,7 +122,7 @@ module.exports = {
                 allPost(sort: { fields: date, order: DESC }) {
                   nodes {
                     title
-                    date(formatString: “MMMM D, YYYY”)
+                    date(formatString: "MMMM D, YYYY")
                     excerpt
                     slug
                   }
